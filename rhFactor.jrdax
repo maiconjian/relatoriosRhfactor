@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl">
+  <name>rhFactor</name>
+  <classpath>C:\Users\maico\Documents\driversBd\mysql-connector-java-8.0.28\mysql-connector-java-8.0.28.jar</classpath>
+  <driver>com.mysql.jdbc.Driver</driver>
+  <username>rhfactor04</username>
+  <password>AZs4buJS6F</password>
+  <url>jdbc:mysql://mysql.rhfactor.com.br/rhfactor04?useSSL=false&amp;createDatabaseIfNotExist=true</url>
+  <database></database>
+  <savePassword>true</savePassword>
+  <serverAddress></serverAddress>
+</jdbcDataAdapter>
