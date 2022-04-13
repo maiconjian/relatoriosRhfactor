@@ -165,7 +165,9 @@ order by nome]]>
 	<detail>
 		<band height="45" splitType="Stretch">
 			<componentElement>
-				<reportElement x="0" y="0" width="555" height="39" uuid="d226bb4a-1fa7-4962-b9e5-27e6a1c130ed"/>
+				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="555" height="39" isRemoveLineWhenBlank="true" uuid="d226bb4a-1fa7-4962-b9e5-27e6a1c130ed">
+					<printWhenExpression><![CDATA[$V{REPORT_COUNT}==1]]></printWhenExpression>
+				</reportElement>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 					<datasetRun subDataset="Dataset1" uuid="ab28a477-9056-48af-80fc-a0762b0c2361">
 						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
@@ -187,8 +189,7 @@ order by nome]]>
 							<textElement textAlignment="Center" verticalAlignment="Middle">
 								<font size="9"/>
 							</textElement>
-							<textFieldExpression><![CDATA[$F{documento}.length() ==  14 ? $F{documento}.substring(0,2)+"."+$F{documento}.substring(2,5)+"."+$F{documento}.substring(5,8)+"/"+$F{documento}.substring(8,12)+"-"+$F{documento}.substring(12,14) : $F{documento}.length() ==  11 ? $F{documento}.substring(0,3)+"."+$F{documento}.substring(3,6)+"."+$F{documento}.substring(6,9)+"-"+$F{documento}.substring(9,11) :$F{documento} == null ? " " :$F{documento}
-]]></textFieldExpression>
+							<textFieldExpression><![CDATA[$F{documento}.length() ==  14 ? $F{documento}.substring(0,2)+"."+$F{documento}.substring(2,5)+"."+$F{documento}.substring(5,8)+"/"+$F{documento}.substring(8,12)+"-"+$F{documento}.substring(12,14) : $F{documento}.length() ==  11 ? $F{documento}.substring(0,3)+"."+$F{documento}.substring(3,6)+"."+$F{documento}.substring(6,9)+"-"+$F{documento}.substring(9,11) :$F{documento} == null ? " " :$F{documento}]]></textFieldExpression>
 						</textField>
 						<textField>
 							<reportElement x="270" y="10" width="90" height="20" uuid="2f3c37e8-426b-4386-a074-ea54e8ded7e2">
