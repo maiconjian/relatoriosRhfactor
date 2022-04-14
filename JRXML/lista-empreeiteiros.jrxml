@@ -330,7 +330,7 @@ order by nome]]>
 	<detail>
 		<band height="40" splitType="Stretch">
 			<componentElement>
-				<reportElement isPrintRepeatedValues="false" x="0" y="0" width="831" height="39" isRemoveLineWhenBlank="true" uuid="8e08b822-df4a-4704-a68e-40238aa99a9a">
+				<reportElement x="0" y="0" width="831" height="39" isRemoveLineWhenBlank="true" uuid="8e08b822-df4a-4704-a68e-40238aa99a9a">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[$V{REPORT_COUNT}==1]]></printWhenExpression>

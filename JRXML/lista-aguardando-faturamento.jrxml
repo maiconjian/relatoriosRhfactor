@@ -185,7 +185,7 @@ inner join projeto p on f.projeto_id = p.id]]>
 	<detail>
 		<band height="31" splitType="Stretch">
 			<componentElement>
-				<reportElement isPrintRepeatedValues="false" x="1" y="-3" width="553" height="31" isRemoveLineWhenBlank="true" uuid="52098dba-c309-4fe2-994f-20d289871845">
+				<reportElement x="1" y="-3" width="553" height="31" isRemoveLineWhenBlank="true" uuid="52098dba-c309-4fe2-994f-20d289871845">
 					<printWhenExpression><![CDATA[$V{REPORT_COUNT} == 1]]></printWhenExpression>
 				</reportElement>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
