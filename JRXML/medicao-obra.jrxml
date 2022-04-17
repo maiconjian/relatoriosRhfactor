@@ -22,7 +22,7 @@
 FROM contrato_empreiteiro_medicao as m
 INNER JOIN contrato_empreiteiro ce on m.contrato_empreiteiro_id = ce.id
 WHERE ce.projeto_id = $P{LIST_ID_PROJETO}
-AND ce.empreiteiro_id = $P{LIST_ID_EMPREITEIRO} ]]>
+AND ce.empreiteiro_id = $P{LIST_ID_EMPREITEIRO}]]>
 		</queryString>
 		<field name="descricao" class="java.lang.String">
 			<property name="com.jaspersoft.studio.field.name" value="descricao"/>
@@ -777,7 +777,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 			</textField>
 			<componentElement>
 				<reportElement x="0" y="182" width="574" height="30" uuid="da397f9f-e9b3-4be7-808e-086c2c1b179e"/>
-				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 					<datasetRun subDataset="Dataset1" uuid="b0454398-ea88-443f-87bf-6dec8bb3cc15">
 						<datasetParameter name="LIST_ID_PROJETO">
 							<datasetParameterExpression><![CDATA[$P{ID_PROJETO}]]></datasetParameterExpression>
@@ -1050,7 +1050,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled">
-					<paragraph firstLineIndent="0" rightIndent="5"/>
+					<paragraph firstLineIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{saldoAFaturar}]]></textFieldExpression>
 			</textField>
@@ -1073,7 +1073,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Middle" markup="styled">
-					<paragraph firstLineIndent="0" rightIndent="5"/>
+					<paragraph firstLineIndent="0" rightIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{valorDaMedicao}]]></textFieldExpression>
 			</textField>
@@ -1185,7 +1185,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="10" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Dados Bancários]]></text>
+				<text><![CDATA[DADOS BANCÁRIOS]]></text>
 			</staticText>
 			<textField pattern="¤#,##0.##;¤-#,##0.##">
 				<reportElement x="70" y="116" width="320" height="18" uuid="3985055d-6c46-462b-9dac-eb051510e451">
@@ -1265,8 +1265,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 				<textElement textAlignment="Left" verticalAlignment="Middle" markup="styled">
 					<paragraph firstLineIndent="0" rightIndent="5"/>
 				</textElement>
-				<textFieldExpression><![CDATA[""
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<rectangle>
 				<reportElement x="0" y="134" width="70" height="18" backcolor="#D9D7D7" uuid="ca24e1c2-53c0-4b3e-b99d-89c4e800a804">
