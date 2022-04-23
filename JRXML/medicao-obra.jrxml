@@ -58,6 +58,7 @@ AND ce.empreiteiro_id = $P{LIST_ID_EMPREITEIRO}]]>
 	</subDataset>
 	<parameter name="ID_PROJETO" class="java.lang.Long"/>
 	<parameter name="ID_EMPREITEIRO" class="java.lang.Long"/>
+	<parameter name="PATH_LOGO" class="java.lang.String"/>
 	<queryString language="SQL">
 		<![CDATA[select c.nome AS nome_cliente
    , p.inicio_da_obra
@@ -208,7 +209,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 				<reportElement x="10" y="2" width="203" height="40" uuid="ebd41088-1835-47ea-98d8-3939753275c3">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["C:/Users/maico/Documents/GitHub/relatoriosRhfactor/img/sto2.png"]]></imageExpression>
+				<imageExpression><![CDATA[$P{PATH_LOGO}]]></imageExpression>
 			</image>
 			<staticText>
 				<reportElement x="235" y="3" width="310" height="39" forecolor="#056839" uuid="0caca24d-442c-4aa6-8c25-ef0e48bf38a1"/>

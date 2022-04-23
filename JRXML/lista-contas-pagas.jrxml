@@ -47,6 +47,7 @@ and c.pago  =1]]>
 	<parameter name="DATA_DE" class="java.lang.String"/>
 	<parameter name="DATA_ATE" class="java.lang.String"/>
 	<parameter name="ID_PROJETO" class="java.lang.Long"/>
+	<parameter name="PATH_LOGO" class="java.lang.String"/>
 	<queryString language="SQL">
 		<![CDATA[select * from contas c]]>
 	</queryString>
@@ -71,7 +72,7 @@ and c.pago  =1]]>
 				<reportElement x="1" y="9" width="209" height="65" uuid="ebd41088-1835-47ea-98d8-3939753275c3">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
-				<imageExpression><![CDATA["C:/Users/maico/Documents/GitHub/relatoriosRhfactor/img/sto2.png"]]></imageExpression>
+				<imageExpression><![CDATA[$P{PATH_LOGO}]]></imageExpression>
 			</image>
 			<rectangle>
 				<reportElement x="0" y="90" width="555" height="24" backcolor="#D9D7D7" uuid="2a554b43-488e-46f7-9536-f7c9d4367818">
