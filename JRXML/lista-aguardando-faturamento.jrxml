@@ -206,7 +206,7 @@ inner join projeto p on f.projeto_id = p.id]]>
 						<textField pattern="dd/MM/yyyy">
 							<reportElement x="6" y="0" width="100" height="30" uuid="a65c34b6-851d-492f-8c5b-2fb6c59ba112"/>
 							<textElement textAlignment="Center" verticalAlignment="Middle"/>
-							<textFieldExpression><![CDATA[$F{data_faturamento}]]></textFieldExpression>
+							<textFieldExpression><![CDATA[$F{data_faturamento} == null  ? " " :  $F{data_faturamento}]]></textFieldExpression>
 						</textField>
 						<textField pattern="dd/MM/yyyy">
 							<reportElement x="446" y="0" width="102" height="30" uuid="aca29c7e-db3b-4750-bdeb-7c658915acea"/>

@@ -199,15 +199,15 @@ inner join projeto p on f.projeto_id = p.id]]>
 		</band>
 	</pageHeader>
 	<detail>
-		<band height="34" splitType="Stretch">
+		<band height="30" splitType="Stretch">
 			<componentElement>
 				<reportElement x="0" y="0" width="555" height="30" isRemoveLineWhenBlank="true" uuid="52098dba-c309-4fe2-994f-20d289871845">
 					<printWhenExpression><![CDATA[$V{REPORT_COUNT} == 1]]></printWhenExpression>
 				</reportElement>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
-					<datasetRun subDataset="Dataset1" uuid="f5aa2d74-89cb-4217-a6c5-08107f752d23">
+					<datasetRun subDataset="Dataset1" uuid="69789622-3c47-4c96-968a-00b86ac0be80">
 						<datasetParameter name="LIST_DATA_DE">
-							<datasetParameterExpression><![CDATA[$P{DATA_ATE}]]></datasetParameterExpression>
+							<datasetParameterExpression><![CDATA[$P{DATA_DE}]]></datasetParameterExpression>
 						</datasetParameter>
 						<datasetParameter name="LIST_DATA_ATE">
 							<datasetParameterExpression><![CDATA[$P{DATA_ATE}]]></datasetParameterExpression>
@@ -221,7 +221,7 @@ inner join projeto p on f.projeto_id = p.id]]>
 						<textField pattern="dd/MM/yyyy">
 							<reportElement x="6" y="0" width="94" height="30" uuid="a65c34b6-851d-492f-8c5b-2fb6c59ba112"/>
 							<textElement textAlignment="Center" verticalAlignment="Middle"/>
-							<textFieldExpression><![CDATA[$F{data_faturamento}]]></textFieldExpression>
+							<textFieldExpression><![CDATA[$F{data_faturamento} == null ? " ":$F{data_faturamento}]]></textFieldExpression>
 						</textField>
 						<textField pattern="dd/MM/yyyy">
 							<reportElement x="446" y="0" width="108" height="30" uuid="aca29c7e-db3b-4750-bdeb-7c658915acea"/>
