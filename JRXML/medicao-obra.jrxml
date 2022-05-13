@@ -791,7 +791,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 				</textElement>
 				<text><![CDATA[Valor Contrato]]></text>
 			</staticText>
-			<textField pattern="¤#,##0.##;¤-#,##0.##">
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
 				<reportElement x="492" y="134" width="82" height="18" uuid="af884f49-20b5-4f77-b75e-f95016b3f9d2">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
@@ -861,7 +861,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 								<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							</reportElement>
 						</line>
-						<textField pattern="¤#,##0.##;¤-#,##0.##">
+						<textField pattern="¤#,##0.00;¤-#,##0.00">
 							<reportElement x="386" y="0" width="87" height="30" uuid="12d44c17-db2b-48b3-a057-d1dd6582bc8d">
 								<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							</reportElement>
@@ -993,7 +993,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<paragraph rightIndent="2"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$V{SUM_PORCENTAGEM}+"%"]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$V{SUM_PORCENTAGEM} ==null ? "": $V{SUM_PORCENTAGEM}+" %"]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement positionType="FixRelativeToBottom" x="220" y="212" width="89" height="24" backcolor="#CCC6C6" uuid="5a139f47-ca24-46bb-b37f-0cbfc39cbe5a"/>
@@ -1026,7 +1026,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 			</line>
-			<textField evaluationTime="Band" pattern="¤#,##0.##;¤-#,##0.##">
+			<textField evaluationTime="Band" pattern="¤#,##0.00;¤-#,##0.00">
 				<reportElement positionType="FixRelativeToBottom" x="385" y="212" width="90" height="24" uuid="b6bbda9b-46ba-4ebe-8c7c-70d4345e7c41">
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
@@ -1040,7 +1040,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<paragraph rightIndent="2"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$V{SUM_VALOR}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$V{SUM_VALOR} == null ? "" : $V{SUM_VALOR}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
@@ -1135,7 +1135,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 					<pen lineColor="#050505"/>
 				</graphicElement>
 			</rectangle>
-			<textField pattern="¤#,##0.##;¤-#,##0.##">
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
 				<reportElement x="491" y="36" width="82" height="18" uuid="67431d92-4cac-4235-a82d-9ccd6760b836">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
@@ -1158,7 +1158,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 				</textElement>
 				<text><![CDATA[VALOR A SER PAGO]]></text>
 			</staticText>
-			<textField pattern="¤#,##0.##;¤-#,##0.##">
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
 				<reportElement x="491" y="72" width="82" height="18" uuid="6f5bfa59-f5a3-4cd9-8d2b-c67d5d6f326e">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.rightIndent" value="px"/>
@@ -1183,7 +1183,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 					<pen lineColor="#050505"/>
 				</graphicElement>
 			</rectangle>
-			<textField pattern="¤#,##0.##;¤-#,##0.##">
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
 				<reportElement x="491" y="0" width="82" height="18" uuid="24e618db-f67b-49ac-aa6e-a9a869dca2dc">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>
@@ -1200,7 +1200,7 @@ AND ce.empreiteiro_id = $P{ID_EMPREITEIRO}]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{valorContrato}]]></textFieldExpression>
 			</textField>
-			<textField pattern="¤#,##0.##;¤-#,##0.##">
+			<textField pattern="¤#,##0.00;¤-#,##0.00">
 				<reportElement x="150" y="54" width="279" height="36" uuid="e4be72bd-fcdf-4fb4-bc5e-8e5930073c26">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.firstLineIndent" value="px"/>

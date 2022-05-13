@@ -10,7 +10,7 @@
 		<parameter name="LIST_DATA_ATE" class="java.lang.String"/>
 		<parameter name="LIST_ID_PROJETO" class="java.lang.Long"/>
 		<queryString language="SQL">
-			<![CDATA[select c.data_de_pagamento, c.data, p.nome as projeto, c.fornecedor_nome, c.nota_fiscal, c.valor
+			<![CDATA[select c.data_de_pagamento, c.data,c.vencimento as data_vencimento, p.nome as projeto, c.fornecedor_nome, c.nota_fiscal, c.valor
 from contas c
 inner join projeto p on c.projeto_id = p.id
 where (c.data >= $P{LIST_DATA_DE} OR  $P{LIST_DATA_DE} = '')
@@ -25,6 +25,10 @@ and c.pago  =1]]>
 		<field name="data" class="java.sql.Date">
 			<property name="com.jaspersoft.studio.field.name" value="data"/>
 			<property name="com.jaspersoft.studio.field.label" value="data"/>
+		</field>
+		<field name="data_vencimento" class="java.sql.Date">
+			<property name="com.jaspersoft.studio.field.name" value="vencimento"/>
+			<property name="com.jaspersoft.studio.field.label" value="data_vencimento"/>
 		</field>
 		<field name="projeto" class="java.lang.String">
 			<property name="com.jaspersoft.studio.field.name" value="nome"/>
@@ -84,11 +88,11 @@ and c.pago  =1]]>
 				</graphicElement>
 			</rectangle>
 			<staticText>
-				<reportElement x="0" y="91" width="80" height="22" backcolor="#CCC6C6" uuid="3d5dd899-e620-4b7b-98ec-17006ce2f9c8"/>
+				<reportElement x="4" y="91" width="75" height="22" backcolor="#CCC6C6" uuid="3d5dd899-e620-4b7b-98ec-17006ce2f9c8"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[DATA]]></text>
+				<text><![CDATA[VENCIMENTO]]></text>
 			</staticText>
 			<line>
 				<reportElement x="82" y="91" width="1" height="22" uuid="eb65b830-fa0c-43e6-80ce-db49c4aaf1de">
@@ -224,7 +228,7 @@ and c.pago  =1]]>
 						<textField pattern="dd/MM/yyyy">
 							<reportElement x="5" y="4" width="74" height="30" uuid="bed4caf2-34b5-4073-a012-392937984137"/>
 							<textElement textAlignment="Center" verticalAlignment="Middle"/>
-							<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+							<textFieldExpression><![CDATA[$F{data_vencimento} == null ? "" : $F{data_vencimento}]]></textFieldExpression>
 						</textField>
 						<textField>
 							<reportElement x="90" y="4" width="114" height="30" uuid="6ddf8831-4066-42c7-b5ee-ad6da070c5bf">
@@ -264,7 +268,7 @@ and c.pago  =1]]>
 								<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							</reportElement>
 							<textElement textAlignment="Right" verticalAlignment="Middle"/>
-							<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
+							<textFieldExpression><![CDATA[$F{valor} == null ? "":$F{valor}]]></textFieldExpression>
 						</textField>
 					</jr:listContents>
 				</jr:list>
