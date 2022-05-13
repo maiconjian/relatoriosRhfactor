@@ -568,7 +568,7 @@ WHERE p.id = $P{ID_PROJETO}]]>
 								<property name="com.jaspersoft.studio.unit.x" value="px"/>
 							</reportElement>
 						</line>
-						<textField pattern="¤#,##0.##;¤-#,##0.##">
+						<textField pattern="¤#,##0.00;¤-#,##0.00">
 							<reportElement x="380" y="0" width="76" height="30" uuid="3b7d3644-cb54-47d8-b637-dd5f07a2832a"/>
 							<textElement textAlignment="Right" verticalAlignment="Middle"/>
 							<textFieldExpression><![CDATA[$F{valor}]]></textFieldExpression>
@@ -800,8 +800,7 @@ WHERE p.id = $P{ID_PROJETO}]]>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<paragraph firstLineIndent="0" rightIndent="5"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new BigDecimal(1.90).multiply($V{VL_RECEITA_OPERACIONAL}.subtract($V{SUM_VALOR}.subtract( $F{total_imobilizado} ) )).subtract($V{VL_RECEITA_OPERACIONAL}.subtract($V{SUM_VALOR}.subtract( $F{total_imobilizado} ) ))
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new BigDecimal(1.90).multiply($V{VL_RECEITA_OPERACIONAL}.subtract($V{SUM_VALOR}.subtract( $F{total_imobilizado} ) )).subtract($V{VL_RECEITA_OPERACIONAL}.subtract($V{SUM_VALOR}.subtract( $F{total_imobilizado} ) ))]]></textFieldExpression>
 			</textField>
 			<rectangle>
 				<reportElement x="120" y="142" width="130" height="18" backcolor="#D9D7D7" uuid="8443f762-c4e4-459a-a61f-739bcdaa7b4c">
@@ -941,8 +940,7 @@ WHERE p.id = $P{ID_PROJETO}]]>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
 					<paragraph firstLineIndent="0" rightIndent="5"/>
 				</textElement>
-				<textFieldExpression><![CDATA[new BigDecimal(1.05).multiply($V{VL_RECEITA_OPERACIONAL}.subtract($V{SUM_VALOR}.subtract( $F{total_imobilizado} ) )).subtract($V{VL_RECEITA_OPERACIONAL}.subtract($V{SUM_VALOR}.subtract( $F{total_imobilizado} ) ))
-]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new BigDecimal(1.05).multiply($V{VL_RECEITA_OPERACIONAL}.subtract($V{SUM_VALOR}.subtract( $F{total_imobilizado} ) )).subtract($V{VL_RECEITA_OPERACIONAL}.subtract($V{SUM_VALOR}.subtract( $F{total_imobilizado} ) ))]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
